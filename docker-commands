@@ -1,0 +1,26 @@
+sudo apt update
+sudo apt-get install docker.io –y
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo systemctl status docker
+sudo su -
+docker --version
+mkdir w1
+cd w1
+git clone https://github.com/microsoft/project-html-website.git
+ls
+cd project-html-website
+vim Dockerfile
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install apache2 -y
+RUN apt-get install apache2-utils -y
+RUN apt-get clean
+ENTRYPOINT apache2ctl -D FOREGROUND
+ADD index.html /var/www/html/
+sudo docker build –t myimg .
+docker container run –itd -p 88:80 –name test076 myimg
+docker ps -a
+sudo docker tag myimg visaltyagi12/myimg
+sudo docker login
+sudo docker push visaltyagi12/myimg
