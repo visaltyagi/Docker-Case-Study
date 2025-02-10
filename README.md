@@ -1,6 +1,8 @@
 # Docker-Case-Study
 Docker-Case-Study
 
+**Website for Implementation, fork this repository:** https://github.com/microsoft/project-html-website
+
 In this assignment, we have Containerized an HTML Website using Docker in a Production Environment
 
 For a complete solution, check this link: https://medium.com/devops-guides/containerized-an-html-website-using-docker-on-production-environment-docker-case-study-e6a25e0c67a1
